@@ -1,0 +1,62 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* Navigation Button Styles */
+  .btn-group .btn {
+    margin: 0 5px;
+  }
+  
+  /* Navigation Link Styles */
+  .nav-link {
+    margin: 5px 0;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #0d6efd;
+    text-decoration: none;
+    border-radius: 0.3rem;
+  }
+  .nav-link:hover {
+    background-color: #0b5ed7;
+  }
+  
+  /* Card Container Margin */
+  .card-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Card Image Styling */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  body.dark-mode header {
+    background-color: #495057;
+    border-bottom: 1px solid #6c757d;
+  }
+  body.dark-mode .card {
+    background-color: #495057;
+    color: #ffffff;
+  }
+  body.dark-mode .nav-link {
+    background-color: #6c757d;
+    color: #ffffff;
+  }
+  

@@ -1,0 +1,33 @@
+// Define custom color variables
+$bg-light: #f8f9fa;
+$bg-dark: #343a40;
+$text-light: #ffffff;
+$text-dark: #212529;
+
+// Base styles
+body {
+  background-color: $bg-light;
+  color: $text-dark;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Dark mode styles – toggled by adding the "dark-mode" class to body
+.dark-mode {
+  background-color: $bg-dark;
+  color: $text-light;
+
+  .card, .nav-link {
+    color: $text-light;
+    border-color: $text-light;
+  }
+}
+
+// Customize cards (adjust image dimensions and add spacing)
+.card {
+  margin-bottom: 20px;
+  img {
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+  }
+}

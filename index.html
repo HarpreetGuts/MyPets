@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animals</title>
+
+  <!-- 1) Bootstrap CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+
+  <!-- 2) Custom Inline CSS for Elliptical Images & Transitions -->
+  <style>
+    /* Dark mode (default) */
+    body.bg-dark.text-white {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Light mode */
+    body.bg-light.text-dark {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Elliptical images */
+    .img-ellipse {
+      border-radius: 50%;   /* Creates ellipse (or circle if width=height) */
+      width: 300px;         /* Adjust as needed */
+      height: 200px;        /* Adjust as needed */
+      object-fit: cover;    /* Ensures the image fills the ellipse */
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+  <!-- 3) Main Container -->
+  <div class="container py-4">
+
+    <!-- TOP HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <!-- Left: Title -->
+      <h1 class="mb-0">Animals</h1>
+
+      <!-- Right: Dark/Light Buttons -->
+      <div>
+        <button id="darkModeBtn" class="btn btn-outline-light me-2">Dark</button>
+        <button id="lightModeBtn" class="btn btn-outline-light">Light</button>
+      </div>
+    </div>
+
+    <!-- SEARCH & MENU BUTTONS ROW -->
+    <div class="row mb-4">
+      <!-- Left (Search Box) -->
+      <div class="col-md-4 mb-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search Animals"
+          aria-label="Search Animals"
+        />
+      </div>
+      <!-- Right (4 Buttons) -->
+      <div class="col-md-8 d-flex align-items-center">
+        <div class="btn-group">
+          <button class="btn btn-outline-primary">Adaptations</button>
+          <!-- The second button is active (blue) -->
+          <button class="btn btn-primary active">Behavior</button>
+          <button class="btn btn-outline-primary">Conservation</button>
+          <button class="btn btn-outline-primary">Diversity</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGES ROW (Elliptical) -->
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <img
+          src="images/penguins.jpg"
+          alt="Penguins"
+          class="img-ellipse"
+        />
+      </div>
+      <div class="col-md-4 mb-3">
+        <img
+          src="images/dogs.webp"
+          alt="Dogs"
+          class="img-ellipse"
+        />
+      </div>
+      <div class="col-md-4 mb-3">
+        <img
+          src="images/cat.jpg"
+          alt="Cat"
+          class="img-ellipse"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) Bootstrap Bundle JS (CDN) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- 5) Dark/Light Toggle Script -->
+  <script>
+    const darkBtn = document.getElementById('darkModeBtn');
+    const lightBtn = document.getElementById('lightModeBtn');
+
+    // Switch to dark mode
+    darkBtn.addEventListener('click', () => {
+      document.body.classList.remove('bg-light', 'text-dark');
+      document.body.classList.add('bg-dark', 'text-white');
+    });
+
+    // Switch to light mode
+    lightBtn.addEventListener('click', () => {
+      document.body.classList.remove('bg-dark', 'text-white');
+      document.body.classList.add('bg-light', 'text-dark');
+    });
+  </script>
+</body>
+</html>
